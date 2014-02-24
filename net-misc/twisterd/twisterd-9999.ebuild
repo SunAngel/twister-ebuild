@@ -40,5 +40,6 @@ src_configure() {
 }
 
 src_install() {
-	cp "${S}/twisterd" "${D}/" || die "Install failed!"
+	mkdir -p "${D}/usr/bin/"
+	cp "${S}/twisterd" "${D}/usr/bin/" || die "Install failed!"
 }
